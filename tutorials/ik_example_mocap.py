@@ -21,12 +21,12 @@
 #
 # 2021.02.12
 import torch
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
+from src.human_body_prior.tools.omni_tools import copy2cpu as c2c
 
-from human_body_prior.models.ik_engine import IK_Engine
+from src.human_body_prior.models.ik_engine import IK_Engine
 from torch import nn
 from typing import Union, Iterable
-from human_body_prior.body_model.body_model import BodyModel
+from src.human_body_prior.body_model.body_model import BodyModel
 import numpy as np
 from colour import Color
 
@@ -37,10 +37,10 @@ import numpy as np
 
 import torch
 from colour import Color
-from human_body_prior.body_model.body_model import BodyModel
+from src.human_body_prior.body_model.body_model import BodyModel
 from torch import nn
 
-from human_body_prior.models.ik_engine import IK_Engine
+from src.human_body_prior.models.ik_engine import IK_Engine
 from os import path as osp
 
 def compute_vertex_normal_batched(vertices, indices):

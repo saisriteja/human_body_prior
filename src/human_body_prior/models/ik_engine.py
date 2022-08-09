@@ -30,22 +30,22 @@ from body_visualizer.tools.psbody_mesh_tools import rotateXYZ, points_to_cubes, 
 from torch import nn
 import torch
 
-from human_body_prior.tools.model_loader import load_model
+from src.human_body_prior.tools.model_loader import load_model
 
 import numpy as np
 
 from body_visualizer.tools.vis_tools import colors
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
+from src.human_body_prior.tools.omni_tools import copy2cpu as c2c
 from psbody.mesh import MeshViewers
 
-from human_body_prior.tools.omni_tools import log2file
+from src.human_body_prior.tools.omni_tools import log2file
 
-from human_body_prior.models.vposer_model import VPoser
-from human_body_prior.tools.omni_tools import flatten_list
+from src.human_body_prior.models.vposer_model import VPoser
+from src.human_body_prior.tools.omni_tools import flatten_list
 
 
 def visualize(points, bm_f, mvs, kpts_colors, verbosity=2, logger=None):
-    from human_body_prior.tools.omni_tools import log2file
+    from src.human_body_prior.tools.omni_tools import log2file
 
     if logger is None: logger = log2file()
 
@@ -174,7 +174,7 @@ class IK_Engine(nn.Module):
                                  if a weight value is left out, its respective object item will be removed as well. imagine optimizing without data term!
         :param display_rc: number of row and columns in case verbosity > 1
         :param verbosity: 0: silent, 1: text, 2: text/visual. running 2 over ssh would need extra work
-        :param logger: an instance of human_body_prior.tools.omni_tools.log2file
+        :param logger: an instance of src.human_body_prior.tools.omni_tools.log2file
         '''
 
 

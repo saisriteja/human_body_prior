@@ -26,10 +26,10 @@ from typing import Union
 import numpy as np
 import torch
 from colour import Color
-from human_body_prior.body_model.body_model import BodyModel
+from src.human_body_prior.body_model.body_model import BodyModel
 from torch import nn
 
-from human_body_prior.models.ik_engine import IK_Engine
+from src.human_body_prior.models.ik_engine import IK_Engine
 from os import path as osp
 
 
@@ -89,7 +89,7 @@ ik_engine = IK_Engine(vposer_expr_dir=vposer_expr_dir,
                       stepwise_weights=stepwise_weights,
                       optimizer_args=optimizer_args).to(comp_device)
 
-from human_body_prior.tools.omni_tools import create_list_chunks
+from src.human_body_prior.tools.omni_tools import create_list_chunks
 frame_ids = np.arange(len(target_bm.v))
 np.random.shuffle(frame_ids)
 batch_size = 4

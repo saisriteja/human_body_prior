@@ -10,8 +10,8 @@ Following is a code snippet for training that can be found in the [example train
 import glob
 import os.path as osp
 
-from human_body_prior.tools.configurations import load_config
-from human_body_prior.train.vposer_trainer import train_vposer_once
+from src.human_body_prior.tools.configurations import load_config
+from src.human_body_prior.train.vposer_trainer import train_vposer_once
 
 def main():
     expr_id = 'V02_05'

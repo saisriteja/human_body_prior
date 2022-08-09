@@ -21,7 +21,7 @@
 
 import os, glob
 import numpy as np
-from human_body_prior.tools.configurations import load_config, dump_config
+from src.human_body_prior.tools.configurations import load_config, dump_config
 import os.path as osp
 
 def exprdir2model(expr_dir):

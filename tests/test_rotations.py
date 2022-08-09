@@ -23,8 +23,8 @@
 
 import unittest
 
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
-from human_body_prior.train.vposer_smpl import VPoser
+from src.human_body_prior.tools.omni_tools import copy2cpu as c2c
+from src.human_body_prior.train.vposer_smpl import VPoser
 
 import numpy as np
 import cv2

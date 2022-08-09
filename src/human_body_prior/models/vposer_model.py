@@ -23,8 +23,8 @@
 
 import numpy as np
 import torch
-from human_body_prior.models.model_components import BatchFlatten
-from human_body_prior.tools.rotation_tools import matrot2aa
+from src.human_body_prior.models.model_components import BatchFlatten
+from src.human_body_prior.tools.rotation_tools import matrot2aa
 from torch import nn
 from torch.nn import functional as F
 

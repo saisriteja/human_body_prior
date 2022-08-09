@@ -32,20 +32,20 @@ from pytorch_lightning.plugins import DDPPlugin
 import numpy as np
 import pytorch_lightning as pl
 import torch
-from human_body_prior.body_model.body_model import BodyModel
-from human_body_prior.data.dataloader import VPoserDS
-from human_body_prior.data.prepare_data import dataset_exists
-from human_body_prior.data.prepare_data import prepare_vposer_datasets
-from human_body_prior.models.vposer_model import VPoser
-from human_body_prior.tools.angle_continuous_repres import geodesic_loss_R
-from human_body_prior.tools.configurations import load_config, dump_config
-from human_body_prior.tools.omni_tools import copy2cpu as c2c
-from human_body_prior.tools.omni_tools import get_support_data_dir
-from human_body_prior.tools.omni_tools import log2file
-from human_body_prior.tools.omni_tools import make_deterministic
-from human_body_prior.tools.omni_tools import makepath
-from human_body_prior.tools.rotation_tools import aa2matrot
-from human_body_prior.visualizations.training_visualization import vposer_trainer_renderer
+from src.human_body_prior.body_model.body_model import BodyModel
+from src.human_body_prior.data.dataloader import VPoserDS
+from src.human_body_prior.data.prepare_data import dataset_exists
+from src.human_body_prior.data.prepare_data import prepare_vposer_datasets
+from src.human_body_prior.models.vposer_model import VPoser
+from src.human_body_prior.tools.angle_continuous_repres import geodesic_loss_R
+from src.human_body_prior.tools.configurations import load_config, dump_config
+from src.human_body_prior.tools.omni_tools import copy2cpu as c2c
+from src.human_body_prior.tools.omni_tools import get_support_data_dir
+from src.human_body_prior.tools.omni_tools import log2file
+from src.human_body_prior.tools.omni_tools import make_deterministic
+from src.human_body_prior.tools.omni_tools import makepath
+from src.human_body_prior.tools.rotation_tools import aa2matrot
+from src.human_body_prior.visualizations.training_visualization import vposer_trainer_renderer
 from pytorch_lightning.callbacks import LearningRateMonitor
 from pytorch_lightning.callbacks.early_stopping import EarlyStopping
 
